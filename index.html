@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2 años de nosotros ❤️</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="hearts"></div>
+
+  <nav class="nav">
+    <button onclick="scrollToId('inicio')">Inicio</button>
+    <button onclick="scrollToId('historia')">Historia</button>
+    <button onclick="scrollToId('momentos')">Momentos</button>
+    <button onclick="scrollToId('carta')">Carta</button>
+    <button onclick="scrollToId('razones')">Razones</button>
+    <button onclick="scrollToId('futuro')">Futuro</button>
+  </nav>
+
+  <main>
+    <section id="inicio" class="hero">
+      <div class="hero-glow"></div>
+      <p class="eyebrow">NUESTRA HISTORIA</p>
+      <h1>2 años<br><span>de nosotros</span></h1>
+      <p class="subtitle">Dos años, miles de recuerdos y todavía quiero seguir eligiéndote.</p>
+      <button class="primary" onclick="startExperience()">Abrir nuestra historia ♥</button>
+      <div class="music-pill">
+        <span>♪</span>
+        <span id="musicName">Únicos — Siddhartha</span>
+        <button id="musicBtn" onclick="toggleMusic()">▶</button>
+      </div>
+      <audio id="music" loop></audio>
+      <p class="music-help">Para escuchar la canción, agrega tu archivo de audio desde “Modo editar”.</p>
+    </section>
+
+    <section id="historia" class="section">
+      <div class="section-head">
+        <p class="eyebrow">CAPÍTULO I</p>
+        <h2>Nuestra historia</h2>
+        <p>Cada momento nos trajo hasta aquí.</p>
+      </div>
+      <div class="timeline">
+        <article class="timeline-item">
+          <div class="dot"></div>
+          <div class="timeline-card">
+            <span>EL COMIENZO</span>
+            <h3>Y así empezó todo…</h3>
+            <p>Hay encuentros que parecen casualidad, pero terminan cambiándolo todo.</p>
+          </div>
+        </article>
+        <article class="timeline-item">
+          <div class="dot"></div>
+          <div class="timeline-card">
+            <span>PRIMEROS RECUERDOS</span>
+            <h3>Empezamos a construir “nosotros”.</h3>
+            <p>Risas, salidas, conversaciones interminables y pequeños momentos que se volvieron enormes.</p>
+          </div>
+        </article>
+        <article class="timeline-item">
+          <div class="dot"></div>
+          <div class="timeline-card">
+            <span>2 AÑOS</span>
+            <h3>Y aquí seguimos. ❤️</h3>
+            <p>Dos años después, todavía quedan muchísimas historias por escribir.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="momentos" class="section moments">
+      <div class="section-head">
+        <p class="eyebrow">CAPÍTULO II</p>
+        <h2>Nuestros momentos</h2>
+        <p>Los recuerdos que hacen que nuestra historia sea nuestra.</p>
+      </div>
+      <div id="gallery" class="gallery"></div>
+      <div class="add-memory">
+        <button class="outline" onclick="openEditor()">＋ Guardar otro momento</button>
+      </div>
+    </section>
+
+    <section id="carta" class="section letter-section">
+      <div class="letter-wrap">
+        <p class="eyebrow">CAPÍTULO III</p>
+        <h2>Una carta para ti</h2>
+        <div id="envelope" class="envelope" onclick="openLetter()">
+          <div class="flap"></div>
+          <div class="letter-paper">
+            <p>Para mi persona favorita…</p>
+            <small>Toca para abrir</small>
+          </div>
+        </div>
+        <div id="letterText" class="letter-text hidden">
+          <p>Mi amor:</p>
+          <p>Hoy celebramos dos años y me pongo a pensar en todos los momentos que hemos vivido. En las risas, los abrazos, las aventuras y hasta en esos días que no fueron perfectos, pero que también nos enseñaron a seguir juntos.</p>
+          <p>Gracias por ser parte de mi vida y por convertir tantos momentos normales en recuerdos que quiero guardar para siempre.</p>
+          <p>Si pudiera volver al principio, te volvería a elegir.</p>
+          <p class="signature">Felices 2 años. ❤️<br>Te amo.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="razones" class="section reasons">
+      <div class="section-head">
+        <p class="eyebrow">CAPÍTULO IV</p>
+        <h2>Razones por las que te amo</h2>
+        <p>Toca las tarjetas para descubrirlas.</p>
+      </div>
+      <div id="reasonsGrid" class="reasons-grid"></div>
+    </section>
+
+    <section id="futuro" class="section future">
+      <p class="eyebrow">CAPÍTULO V</p>
+      <h2>Nuestro próximo capítulo</h2>
+      <p class="future-intro">Dos años ya forman una historia. Lo bonito es que todavía nos queda muchísimo por vivir.</p>
+      <div class="dreams">
+        <div>✈️<span>Más viajes</span></div>
+        <div>🏡<span>Nuevos sueños</span></div>
+        <div>📸<span>Más recuerdos</span></div>
+        <div>❤️<span>Muchos aniversarios</span></div>
+      </div>
+      <div class="final-message">
+        <p>Y si esto apenas comienza…</p>
+        <strong>quiero todos los capítulos contigo.</strong>
+        <div class="big-heart">♥</div>
+        <small>2 años de nosotros</small>
+      </div>
+    </section>
+  </main>
+
+  <button class="edit-fab" onclick="openEditor()" title="Modo editar">⚙</button>
+
+  <div id="editorModal" class="modal hidden">
+    <div class="modal-card">
+      <button class="close" onclick="closeEditor()">×</button>
+      <p class="eyebrow">MODO EDITAR</p>
+      <h2>Personaliza nuestra historia</h2>
+      <label>Nombre de la pareja / título
+        <input id="titleInput" placeholder="Ej. Ana & Luis">
+      </label>
+      <label>Fecha de inicio
+        <input id="dateInput" type="date">
+      </label>
+      <label>Tu carta
+        <textarea id="letterInput" rows="7" placeholder="Escribe aquí tu carta..."></textarea>
+      </label>
+      <label>Agregar fotos
+        <input id="photoInput" type="file" accept="image/*" multiple>
+      </label>
+      <label>Agregar canción “Únicos”
+        <input id="audioInput" type="file" accept="audio/*">
+      </label>
+      <p class="tiny">La canción debe ser un archivo que tengas en tu dispositivo. El sitio no incluye ni descarga música con copyright.</p>
+      <div class="editor-actions">
+        <button class="primary" onclick="saveSettings()">Guardar cambios</button>
+        <button class="outline danger" onclick="resetCustom()">Restablecer</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="lightbox" class="lightbox hidden" onclick="closeLightbox()">
+    <img id="lightboxImg" alt="Recuerdo">
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
